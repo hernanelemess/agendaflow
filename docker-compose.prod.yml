@@ -85,7 +85,7 @@ services:
     # O Nginx (abaixo) faz o proxy. Remova o ports se usar Nginx.
     # Mantenha apenas se quiser acesso direto à API.
     ports:
-      - "3000:3000"
+      - "3091:3000"
 
     # Sem bind mounts em produção — usa somente o que está na imagem
     depends_on:
@@ -128,7 +128,7 @@ services:
     # ⚠️ ADAPTE: se tiver um proxy reverso externo (ex: Traefik, Nginx no host),
     # mude para uma porta interna e configure o proxy para apontar aqui
     ports:
-      - "80:80"
+      - "3090:80"
 
     depends_on:
       - api
