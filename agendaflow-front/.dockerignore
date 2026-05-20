@@ -1,0 +1,48 @@
+# =============================================================================
+# .dockerignore — agendaflow-front
+# =============================================================================
+
+# Dependências
+node_modules/
+
+# ⚠️ SEGURANÇA: arquivos de ambiente nunca entram na imagem
+.env
+.env.*
+!.env.example
+
+# Build anterior — será gerado fresh dentro do container
+dist/
+build/
+
+# Controle de versão
+.git/
+.gitignore
+
+# Arquivos Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+nginx.conf
+
+# Desenvolvimento
+*.test.jsx
+*.test.js
+*.spec.js
+__tests__/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Documentação
+README.md

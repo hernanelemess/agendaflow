@@ -1,0 +1,208 @@
+.layout { display: flex; min-height: 100vh; }
+.main { margin-left: 240px; flex: 1; padding: 32px; background: var(--gray-50); }
+
+.header { margin-bottom: 28px; }
+.title    { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+.subtitle { font-size: 14px; color: var(--gray-400); margin-top: 2px; }
+
+/* Stepper */
+.stepper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 0;
+}
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+.stepItem:last-child { flex: none; }
+
+.stepCircle {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--gray-400);
+  font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.current { background: var(--green-600); color: white; }
+.done    { background: var(--green-100); color: var(--green-700); }
+
+.stepLabel { font-size: 12px; color: var(--gray-400); font-weight: 500; white-space: nowrap; }
+.currentLabel { color: var(--green-700); font-weight: 600; }
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: var(--gray-200);
+  margin: 0 8px;
+  border-radius: 1px;
+  transition: background 0.2s;
+}
+.doneLine { background: var(--green-400); }
+
+/* Card */
+.card { min-height: 400px; display: flex; flex-direction: column; }
+
+.alert {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.stepTitle { font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; }
+
+/* Options grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; flex: 1; }
+
+.optionCard {
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  background: var(--white);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.optionCard:hover { border-color: var(--green-400); background: var(--green-50); }
+.optionSelected   { border-color: var(--green-600) !important; background: var(--green-50) !important; }
+
+.optionIcon {
+  width: 38px; height: 38px;
+  background: var(--green-50);
+  color: var(--green-600);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+.optionName { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.optionSub  { font-size: 12px; color: var(--gray-400); }
+.optionMeta {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 12px; color: var(--gray-500); margin-top: 4px;
+}
+.optionMeta span { display: flex; align-items: center; gap: 4px; }
+.price { font-weight: 600; color: var(--green-700); }
+
+.empty { font-size: 14px; color: var(--gray-400); padding: 20px 0; }
+
+/* Step 2 */
+.step2 { display: flex; flex-direction: column; gap: 28px; flex: 1; }
+
+.profGrid { display: flex; flex-direction: column; gap: 10px; }
+.profCard {
+  display: flex; align-items: center; gap: 14px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+.profCard:hover { border-color: var(--green-400); }
+
+.profAvatar {
+  width: 40px; height: 40px;
+  background: var(--green-100);
+  color: var(--green-700);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 700;
+  flex-shrink: 0;
+}
+.profName { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.profBio  { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+.dateInput {
+  height: 42px;
+  padding: 0 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--gray-800);
+  background: var(--white);
+  outline: none;
+  font-family: var(--font);
+  cursor: pointer;
+}
+.dateInput:focus { border-color: var(--green-500); box-shadow: 0 0 0 3px rgba(34,197,94,0.12); }
+
+.slots { display: flex; flex-wrap: wrap; gap: 8px; }
+.slot {
+  padding: 8px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 13px; font-weight: 500;
+  color: var(--gray-700);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.slot:hover { border-color: var(--green-400); color: var(--green-700); }
+.slotSelected { background: var(--green-600) !important; border-color: var(--green-600) !important; color: white !important; }
+
+.notesLabel { display: block; font-size: 13px; font-weight: 500; color: var(--gray-700); margin-bottom: 8px; }
+.notes {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 14px; color: var(--gray-800);
+  resize: vertical; outline: none;
+  font-family: var(--font);
+  line-height: 1.5;
+}
+.notes:focus { border-color: var(--green-500); box-shadow: 0 0 0 3px rgba(34,197,94,0.12); }
+
+/* Confirmação */
+.confirm { display: flex; flex-direction: column; align-items: center; flex: 1; }
+.confirmIcon { color: var(--green-600); margin-bottom: 12px; }
+.confirmTitle { font-size: 18px; font-weight: 700; color: var(--gray-900); margin-bottom: 24px; }
+
+.summary {
+  width: 100%; max-width: 420px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.summaryRow {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 12px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.summaryRow:last-child { border-bottom: none; }
+.summaryLabel { color: var(--gray-500); flex-shrink: 0; margin-right: 16px; }
+.summaryValue { color: var(--gray-800); font-weight: 500; text-align: right; }
+
+/* Nav */
+.nav { display: flex; align-items: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--gray-100); }
+
+.slotBusy {
+  opacity: 0.45;
+  cursor: not-allowed !important;
+  border-color: var(--gray-200) !important;
+  color: var(--gray-400) !important;
+  flex-direction: column;
+  gap: 2px;
+  height: auto;
+  padding: 6px 12px;
+}
+
+.slotBusyLabel {
+  font-size: 10px;
+  color: var(--danger);
+  font-weight: 500;
+}

@@ -1,0 +1,65 @@
+.layout { display: flex; min-height: 100vh; }
+.main { margin-left: 240px; flex: 1; padding: 32px; background: var(--gray-50); }
+
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.title    { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+.subtitle { font-size: 14px; color: var(--gray-400); margin-top: 2px; }
+
+.loading { text-align: center; color: var(--gray-400); padding: 60px; font-size: 14px; }
+
+.empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; padding: 60px;
+  color: var(--gray-400); text-align: center; font-size: 14px;
+}
+
+.list { display: flex; flex-direction: column; gap: 12px; }
+
+.card {
+  display: flex !important;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px !important;
+}
+
+.cardLeft { flex-shrink: 0; }
+
+.dateBox {
+  width: 52px;
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 8px 4px;
+}
+.dateDay { font-size: 22px; font-weight: 700; color: var(--green-700); line-height: 1; }
+.dateMon { font-size: 11px; color: var(--green-600); text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+.cardBody { flex: 1; min-width: 0; }
+.service      { font-size: 15px; font-weight: 600; color: var(--gray-800); }
+.professional { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+.time {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 12px; color: var(--gray-400); margin-top: 6px;
+}
+
+.cardRight { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 500;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+.warning { background: var(--warning-light); color: var(--warning); }
+.success { background: var(--green-50);      color: var(--green-700); }
+.danger  { background: var(--danger-light);  color: var(--danger); }
+.neutral { background: var(--gray-100);      color: var(--gray-500); }
+
+.cancelBtn {
+  font-size: 12px; color: var(--danger);
+  background: none; border: none;
+  padding: 0; cursor: pointer;
+}
+.cancelBtn:hover { text-decoration: underline; }

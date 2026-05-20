@@ -1,0 +1,77 @@
+.layout { display: flex; min-height: 100vh; }
+
+.main {
+  margin-left: 240px;
+  flex: 1;
+  padding: 32px;
+  background: var(--gray-50);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.title    { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+.subtitle { font-size: 14px; color: var(--gray-400); margin-top: 2px; }
+
+.loading { text-align: center; color: var(--gray-400); padding: 60px; font-size: 14px; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard { display: flex; flex-direction: column; gap: 10px; }
+
+.statIcon {
+  width: 40px; height: 40px;
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+}
+.blue   { background: var(--info-light);    color: var(--info); }
+.green  { background: var(--green-50);      color: var(--green-600); }
+.amber  { background: var(--warning-light); color: var(--warning); }
+.purple { background: #f5f3ff;              color: #7c3aed; }
+
+.statValue { font-size: 26px; font-weight: 700; color: var(--gray-900); }
+.statLabel { font-size: 13px; color: var(--gray-500); margin-top: -6px; }
+
+.tables { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.tableTitle { font-size: 15px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left;
+  padding: 8px 10px;
+  color: var(--gray-400);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border-bottom: 1px solid var(--gray-100);
+}
+.table td {
+  padding: 12px 10px;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-50);
+}
+.table tr:last-child td { border-bottom: none; }
+.muted { color: var(--gray-400) !important; }
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+.active   { background: var(--green-50);      color: var(--green-700); }
+.inactive { background: var(--danger-light);   color: var(--danger); }
+.admin    { background: #f5f3ff; color: #7c3aed; }
+.owner    { background: var(--info-light); color: var(--info); }
+.client   { background: var(--gray-100); color: var(--gray-600); }
