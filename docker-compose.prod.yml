@@ -20,6 +20,9 @@ services:
     container_name: agendaflow_db_prod
     restart: unless-stopped  # reinicia automaticamente, exceto se parado manualmente
 
+    ports:
+      - "3092:3306"
+
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE:      ${MYSQL_DATABASE}
