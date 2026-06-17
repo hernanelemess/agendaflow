@@ -9,14 +9,14 @@ async function assertOwner(professionalId, userId, role) {
 }
 
 // Cria um novo intervalo (não sobrescreve mais — permite múltiplos por dia)
-async function create(userId, role, { professional_id, weekday, start_time, end_time, label }) {
+async function create(userId, role, { professional_id, weekday, start_time, end_time }) {
   await assertOwner(professional_id, userId, role);
 
   if (start_time >= end_time) {
     throw AppError('O horário de início deve ser anterior ao de término.', 422);
   }
 
-  const id = await repo.create({ professionalId: professional_id, weekday, start_time, end_time, label });
+  const id = await repo.create({ professionalId: professional_id, weekday, start_time, end_time });
   return repo.findByProfessional(professional_id);
 }
 
