@@ -18,8 +18,15 @@ function errorHandler(err, req, res, next) {
   }
 
   // Qualquer outro erro inesperado
-  console.error(err);
-  return res.status(500).json({ error: 'Erro interno do servidor.' });
+  app.use((err, req, res, next) => {
+    console.error("🔥 ERRO CAPTURADO:");
+    console.error(err); // <-- ISSO MOSTRA A CAUSA REAL
+
+    return res.status(err.status || 500).json({
+      error: err.message,
+      stack: err.stack, // só dev
+    });
+  });
 }
 
 module.exports = { errorHandler };
