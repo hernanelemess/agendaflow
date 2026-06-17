@@ -1,9 +1,9 @@
 const { pool } = require('../../../database/connection');
 
-async function create({ professionalId, weekday, start_time, end_time, label }) {
+async function create({ professionalId, weekday, start_time, end_time,}) {
   const [result] = await pool.query(
-    'INSERT INTO schedules (professional_id, weekday, start_time, end_time, label) VALUES (?, ?, ?, ?, ?)',
-    [professionalId, weekday, start_time, end_time, label || null]
+    'INSERT INTO schedules (professional_id, weekday, start_time, end_time) VALUES (?, ?, ?, ?, ?)',
+    [professionalId, weekday, start_time, end_time || null]
   );
   return result.insertId;
 }
